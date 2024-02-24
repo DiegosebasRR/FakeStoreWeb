@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-code: #64687a;
+    --border-code: rgb(80, 79, 79);
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 47.9 95.8% 53.1%;
+    --primary-foreground: 26 83.3% 14.1%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background-code: rgb(40, 44, 52);
+    --border-code: rgb(175, 175, 175);
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 47.9 95.8% 53.1%;
+    --primary-foreground: 26 83.3% 14.1%;
+    --secondary: 12 1.5% 8.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 35.5 91.7% 32.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.syntax-highlighter {
+  color: #fff;
+  background-color: var(--background-code) !important;
+  font-family: Droid Sans Mono;
+  letter-spacing: 1.5px;
+  padding: 0.5em;
+  max-width: 46rem;
+  font-weight: 500;
+  border: var(--border-code) 2px solid;
+  border-radius: 10px;
+  overflow: auto;
+  scrollbar-color: #fad02c black;
+  scrollbar-width: thin;
+}
+
+.syntax-highlighter .language-typescript > span:hover {
+  background-color: rgba(224, 224, 173, 0.2) !important;
+}
+
+.syntax-highlighter .language-typescript .linenumber {
+  color: rgb(126, 120, 135) !important;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: transparent;
+  border-right: 2px solid rgb(126, 120, 135);
+}
+
+.syntax-highlighter .language-typescript .linenumber:hover {
+  color: rgb(213, 214, 133) !important;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.syntax-highlighter .language-typescript .hljs-comment {
+  color: #b2e457;
+  font-weight: 450;
+}
+
+.syntax-highlighter .language-typescript .hljs-keyword {
+  color: #d86fc0;
+}
+
+.syntax-highlighter .language-typescript .hljs-function {
+  color: #4098d7;
+}
+
+.syntax-highlighter .language-typescript .hljs-title {
+  color: #d8e2a9;
+}
+
+.syntax-highlighter .language-typescript .hljs-tag {
+  color: #d4d4d4;
+}
+
+.syntax-highlighter .language-typescript .hljs-name {
+  color: #4098d7;
+}
+
+.syntax-highlighter .language-typescript .hljs-attr {
+  color: #86ddff;
+}
+
+.syntax-highlighter .language-typescript .hljs-string {
+  color: #fad02c;
+}
+
+.syntax-highlighter .language-typescript .hljs-built_in {
+  color: #00d5b0;
+}
+body {
+  background: linear-gradient(rgba(206, 12, 12, 0.1) 1px, transparent 1px) 0% 0% /
+      104px 100px,
+    linear-gradient(to right, rgba(165, 164, 164, 0.1) 1px, transparent 1px)
+      transparent 0% 0% / 104px 100px;
+  background-color: hsl(var(--background));
+}
+body::after {
+  background-image: radial-gradient(
+      at 40% 40%,
+      rgb(30, 144, 255) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 90% 10%, rgb(255, 105, 180) 0px, transparent 50%),
+    radial-gradient(at 50% 95%, rgb(155, 41, 243) 0px, transparent 50%),
+    radial-gradient(at 20% 30%, rgb(163, 126, 248) 0px, transparent 50%),
+    radial-gradient(at 90% 90%, rgb(115, 25, 188) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, rgb(255, 69, 0) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, rgb(128, 0, 128) 0px, transparent 50%);
+  position: fixed;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(100%);
+  top: 0px;
+  opacity: 0.1;
+  transform: translateZ(0px);
+}
