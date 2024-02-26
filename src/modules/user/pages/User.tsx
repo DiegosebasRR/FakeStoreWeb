@@ -20,7 +20,7 @@ const User = () => {
   ]
   
   `;
-  const Request = `https://fake-store-api-vqyd.onrender.com/user/{id}`;
+  const Request = `https://fakestoreapi-production-06c7.up.railway.app/user/{id}`;
   const userById = `
   {
     "_id": "id_del_usuario",
@@ -79,7 +79,7 @@ const User = () => {
                 useInlineStyles={false}
                 wrapLines={true}
               >
-                [GET] https://fake-store-api-vqyd.onrender.com/user
+                [GET] https://fakestoreapi-production-06c7.up.railway.app/user
               </SyntaxHighlighter>
             </li>
             <li className="mt-2">
@@ -151,7 +151,7 @@ const User = () => {
                 useInlineStyles={false}
                 wrapLines={true}
               >
-                [POST] https://fake-store-api-vqyd.onrender.com/user
+                [POST] https://fakestoreapi-production-06c7.up.railway.app/user
               </SyntaxHighlighter>
             </li>
             <li className="mt-2">

@@ -17,7 +17,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch(
-      "https://fake-store-api-vqyd.onrender.com/product?results=4&page=1&pageSize=4"
+      "https://fakestoreapi-production-06c7.up.railway.app/product?results=4&page=1&pageSize=4"
     )
       .then((response) => {
         if (!response.ok) {
@@ -57,7 +57,7 @@ const Home = () => {
         useInlineStyles={false}
         wrapLines={true}
       >
-        {`[GET] https://fake-store-api-vqyd.onrender.com/product?results=4&page=1&pageSize=4`}
+        {`[GET] https://fakestoreapi-production-06c7.up.railway.app/product?results=4&page=1&pageSize=4`}
       </SyntaxHighlighter>
       <div className="gap-4 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         <ProductCards products={products} />

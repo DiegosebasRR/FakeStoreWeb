@@ -105,7 +105,7 @@ const Inventory = () => {
                 useInlineStyles={false}
                 wrapLines={true}
               >
-                [GET] http://localhost:3000/product?results=2&page=1&pageSize=1
+                [GET] https://fake-store-api-vqyd.onrender.com/product?results=2&page=1&pageSize=1
               </SyntaxHighlighter>
             </li>
             <li className="mt-2">
@@ -174,7 +174,7 @@ const Inventory = () => {
                 useInlineStyles={false}
                 wrapLines={true}
               >
-                [POST] http://localhost:3000/product
+                [POST] https://fake-store-api-vqyd.onrender.com/product
               </SyntaxHighlighter>
             </li>
             <li className="mt-2">Ejemplo de Cuerpo de Solicitud:</li>

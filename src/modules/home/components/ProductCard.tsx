@@ -15,7 +15,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Card className="rounded-2xl overflow-hidden">
       <CardHeader>
-        <div className="overflow-hidden w-60 h-60">
+        <div className="overflow-hidden w-60 h-60 ">
           <img src={product.image.location} alt={product.name} />
         </div>
       </CardHeader>
@@ -24,10 +24,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
           {product.name}
         </CardTitle>
         <Badge className="text-sm font-bold">{product.Category.name}</Badge>
-        <CardDescription className="text-sm text-black font-semibold">
+        <CardDescription className="text-sm text-current font-semibold">
           {product.description}
         </CardDescription>
-        <CardDescription className="text-2xl font-extrabold text-gray-700">
+        <CardDescription className="text-2xl font-extrabold text-current">
           {product.price + " $"}
         </CardDescription>
       </CardContent>
